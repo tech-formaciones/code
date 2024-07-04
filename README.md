@@ -71,7 +71,7 @@ Inserta un nuevo producto en la base datos. El cuerpo del mensaje contiene los d
 
 #### PUT
 
-- **Endpoint:** https://dominio.com/productos/<id>
+- **Endpoint:** [link](https://dominio.com/productos/<id>)
 
 Actualiza el producto coincidente con el **id** del producto. El cuerpo del mensaje contiene los datos del  producto en JSON. Cualquier error retornara un *400 Bad Request*
 
