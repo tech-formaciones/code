@@ -51,27 +51,27 @@ El API admite los siguientes métodos:
 
 #### GET
 
-**Endpoint:** https://dominio.com/productos/<id>
+- **Endpoint:** https://dominio.com/productos/<id>
 
 Retorna el producto coincidente con el **id** del producto o *404 Not Found* si no existe en la base de datos.
 
-**Endpoint:** https://dominio.com/productos/?desc=""
-**Endpoint:** https://dominio.com/productos/?price="<precio mínimo>-<precio máximo>"
-**Endpoint:** https://dominio.com/productos/?desc=""&price="<precio mínimo>-<precio máximo>"
+- **Endpoint:** https://dominio.com/productos/?desc=""
+- **Endpoint:** https://dominio.com/productos/?price="<precio mínimo>-<precio máximo>"
+- **Endpoint:** https://dominio.com/productos/?desc=""&price="<precio mínimo>-<precio máximo>"
 
 Retorna una colección de productos. El parámetro **desc** contiene texto para realizar la búsqueda de producto por *ProductName*. El parámetro **price** contiene un texto con un rango de precios para realizar la búsqueda de productos por *UnitPrice*. Los parámetros se pueden combinar en la misma petición.
 
 
 #### POST
 
-**Endpoint:** https://dominio.com/productos/
+- **Endpoint:** https://dominio.com/productos/
 
 Inserta un nuevo producto en la base datos. El cuerpo del mensaje contiene los datos del nuevo producto en JSON. Cualquier error retornara un *400 Bad Request*
 
 
 #### PUT
 
-**Endpoint:** https://dominio.com/productos/<id>
+- **Endpoint:** https://dominio.com/productos/<id>
 
 Actualiza el producto coincidente con el **id** del producto. El cuerpo del mensaje contiene los datos del  producto en JSON. Cualquier error retornara un *400 Bad Request*
 
