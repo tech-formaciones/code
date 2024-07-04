@@ -66,14 +66,14 @@ Retorna una colección de productos. El parámetro **desc** contiene texto para 
 
 - **Endpoint:** https://dominio.com/productos/
 
-Inserta un nuevo producto en la base datos. El cuerpo del mensaje contiene los datos del nuevo producto en JSON. Cualquier error retornara un *400 Bad Request*
+Inserta un nuevo producto en la base datos. El cuerpo del mensaje contiene los datos del nuevo producto en JSON. Cualquier error retornara un *400 Bad Request*.
 
 
 #### PUT
 
 - **Endpoint:** https://dominio.com/productos/id/
 
-Actualiza el producto coincidente con el **id** del producto. El cuerpo del mensaje contiene los datos del  producto en JSON. Cualquier error retornara un *400 Bad Request*
+Actualiza el producto coincidente con el **id** del producto. El cuerpo del mensaje contiene los datos del  producto en JSON. Cualquier error retornara un *400 Bad Request*.
 
 
 

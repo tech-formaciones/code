@@ -20,7 +20,7 @@ namespace StockSmartFunctions
             containerName: "containerName",
             Connection = "",
             LeaseContainerName = "leases",
-            CreateLeaseContainerIfNotExists = true)] IReadOnlyList<MyDocument> input)
+            CreateLeaseContainerIfNotExists = true)] IReadOnlyList<MyInfo> input)
         {
             if (input != null && input.Count > 0)
             {
