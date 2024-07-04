@@ -51,7 +51,7 @@ El API admite los siguientes métodos:
 
 #### GET
 
-- **Endpoint:** https://dominio.com/productos/<id>
+- **Endpoint:** https://dominio.com/productos/id/
 
 Retorna el producto coincidente con el **id** del producto o *404 Not Found* si no existe en la base de datos.
 
@@ -71,7 +71,7 @@ Inserta un nuevo producto en la base datos. El cuerpo del mensaje contiene los d
 
 #### PUT
 
-- **Endpoint:** [link](https://dominio.com/productos/<id>)
+- **Endpoint:** https://dominio.com/productos/id/
 
 Actualiza el producto coincidente con el **id** del producto. El cuerpo del mensaje contiene los datos del  producto en JSON. Cualquier error retornara un *400 Bad Request*
 
