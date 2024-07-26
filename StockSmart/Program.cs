@@ -1,7 +1,18 @@
+using Microsoft.Net.Http.Headers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddHttpClient("Default");
+
+builder.Services.AddHttpClient("APIApp", conf => {
+    conf.BaseAddress = new Uri("http://127.0.0.1:5000/api/");
+    conf.DefaultRequestHeaders.Add("Authorization", "8aaWPy5SzLubp9ApRQbZkWkHA6PFZ33n");
+    //conf.DefaultRequestHeaders.Add(HeaderNames.ContentType, "application/json");
+});
+
 
 var app = builder.Build();
 
@@ -9,15 +20,12 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapControllerRoute(

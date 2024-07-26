@@ -1,4 +1,4 @@
-﻿let App = {
+﻿var App = {
     Core: {
         CreateTable: function (id) {
             $("#" + id).DataTable({
@@ -8,7 +8,16 @@
             });
         }
     },
-    Data: {},
+    Data: {
+        demo: 35,
+        demo2: "Datos de ...",
+        demo3: function (c) {
+            let a = 10;
+            let b = 30;
+
+            return a + b + c;
+        }
+    },
     Page: {
         Products: {
             List: {
@@ -20,6 +29,11 @@
                     });
 
                     $('[data-bs-toggle="tooltip"]').tooltip();
+                }
+            },
+            File: {
+                OnLoad: function () {
+
                 }
             }
         }

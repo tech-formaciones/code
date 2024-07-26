@@ -5,7 +5,7 @@ namespace StockSmart.Models
     public class Producto
     {
         [Display(Name = "Referencia")]
-        [Required(ErrorMessage = "La <b>Referencía</b> es un dato requerido.")]
+        [Required(ErrorMessage = "La <b>Referencía</b> es un dato requerido.")]        
         public int ProductID { get; set; }
 
         [Display(Name = "Descripción")]
@@ -13,13 +13,14 @@ namespace StockSmart.Models
         [MinLength(5, ErrorMessage = "Debe contener al menos 5 caracteres.")]
         public string ProductName { get; set; }
 
-        [Display(Name = "Proveedor")]
+        [Display(Name = "Proveedor")]        
         public int? SupplierID { get; set; }
 
         [Display(Name = "Categoría")]
         public int? CategoryID { get; set; }
 
         [Display(Name = "Cantidades por unidad")]
+        [RegularExpression("[0-9]{4}[A-Z]{3}", ErrorMessage = "No es una matricula")]
         public string QuantityPerUnit { get; set; }
 
         [Display(Name = "Precio")]
